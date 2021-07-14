@@ -7,7 +7,8 @@ import mongoose, { mongo } from 'mongoose';
 
 // import the index router and inject a reference here
 import indexRouter from '../Routes/index';
-import competitorListRouter from '../Routes/competitor-list';
+import competitorRouter from '../Routes/competitor';
+
 
 // Express Web App Configuration
 const app = express();
@@ -15,7 +16,7 @@ export default app; // exports app as the default Object for this module
 
 // DB Configuration
 import * as DBConfig from './db';
-mongoose.connect(DBConfig.LocalURI, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(DBConfig.RemoteURI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 const db = mongoose.connection; // alias for the mongoose connection
 db.on("error", function()
@@ -39,10 +40,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../Client')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
 
-
 // perform routing
 app.use('/', indexRouter);
-app.use('/competitor-list', competitorListRouter); // create a separate "area" of our web application
+app.use('/competitor-list', competitorRouter); // create a separate "area" of our web application
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) 
@@ -63,3 +63,4 @@ app.use(function(err:createError.HttpError, req:express.Request, res:express.Res
 });
 
 //module.exports = app;
+

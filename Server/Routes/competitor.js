@@ -8,6 +8,9 @@ const router = express_1.default.Router();
 exports.default = router;
 const competitor_1 = require("../Controllers/competitor");
 router.get('/', competitor_1.DisplayCompetitorListPage);
+router.get('/add', competitor_1.DisplayAddPage);
 router.get('/edit/:id', competitor_1.DisplayEditPage);
-router.get('/edit', competitor_1.DisplayAddPage);
-//# sourceMappingURL=competitor-list.js.map
+router.get('/add', competitor_1.ProcessAddPage);
+router.post('/edit/:id', competitor_1.ProcessEditPage);
+router.get('/delete/:id', competitor_1.ProcessDeletePage);
+//# sourceMappingURL=competitor.js.map
