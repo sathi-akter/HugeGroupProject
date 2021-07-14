@@ -15,7 +15,7 @@ router.get('/add', DisplayAddPage);
 router.get('/edit/:id', DisplayEditPage);
 
 // Display the Add page
-router.get('/add', ProcessAddPage);
+router.post('/add', ProcessAddPage);
 
 /* POST - process /competitor-list/edit/:id page */
 router.post('/edit/:id', ProcessEditPage);

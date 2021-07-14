@@ -10,7 +10,7 @@ const competitor_1 = require("../Controllers/competitor");
 router.get('/', competitor_1.DisplayCompetitorListPage);
 router.get('/add', competitor_1.DisplayAddPage);
 router.get('/edit/:id', competitor_1.DisplayEditPage);
-router.get('/add', competitor_1.ProcessAddPage);
+router.post('/add', competitor_1.ProcessAddPage);
 router.post('/edit/:id', competitor_1.ProcessEditPage);
 router.get('/delete/:id', competitor_1.ProcessDeletePage);
 //# sourceMappingURL=competitor.js.map
