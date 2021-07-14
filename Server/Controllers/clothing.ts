@@ -1,7 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 
 // Clothing Model
-import Clothing from '../Models/clothing';
+import Clothing from '../Models/match';
 
 // display page functions
 export function DisplayClothingListPage(req: Request, res: Response, next: NextFunction): void

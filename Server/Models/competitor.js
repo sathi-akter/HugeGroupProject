@@ -7,7 +7,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const Schema = mongoose_1.default.Schema;
 const CompetitorItemSchema = new Schema({
     fullname: String,
-    description: String
+    bio: String
 }, {
     collection: "competitor"
 });

@@ -4,7 +4,7 @@ const Schema = mongoose.Schema; // alias for the mongoose schema
 const CompetitorItemSchema = new Schema
 ({
     fullname: String,
-    description: String
+    bio: String
 },
 {
     collection: "competitor"

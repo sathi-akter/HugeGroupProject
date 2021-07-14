@@ -5,14 +5,14 @@
 
         <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-fullname-default">Full Name</span>
-            <input id="name" type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="Competitor Full Name"
+            <input id="name" type="text" class="form-control" placeholder="Competitor Full Name" aria-label="Name" aria-describedby="Competitor Full Name"
             name="fullname" value="<%= competitor.fullname %>" required>
         </div>
 
         <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-description-default">Description</span>
-            <input id="description" type="text" class="form-control" placeholder="Description" aria-label="Description" aria-describedby="Competitor Description"
-            name="description" value="<%= competitor.description %>" required>
+            <span class="input-group-text" id="inputGroup-description-default">Bio</span>
+            <input id="bio" type="text" class="form-control" placeholder="Competitor Biography" aria-label="Bio" aria-describedby="Competitor Biography"
+            name="bio" value="<%= competitor.bio %>" required>
         </div>
 
         <% if(title == "Edit") { %>

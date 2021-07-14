@@ -1,18 +1,16 @@
 import mongoose from 'mongoose';
 const Schema = mongoose.Schema; // alias for the mongoose schema
 
-const ClothingItemSchema = new Schema
+const MatchItemSchema = new Schema
 ({
-    name: String,
-    brand: String,
-    category: String,
-    colour: String,
-    size: String,
-    price: Number
+    matchNumber: Number,
+    competitor1Name: String,
+    competitor2Name: String,
+    winner: String
 },
 {
-    collection: "clothing"
+    collection: "match"
 });
 
-const Model = mongoose.model("Clothing", ClothingItemSchema);
+const Model = mongoose.model("Match", MatchItemSchema);
 export default Model;

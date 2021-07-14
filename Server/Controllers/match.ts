@@ -52,7 +52,7 @@ export function ProcessEditPage(req: Request, res: Response, next: NextFunction)
     ({
        "_id": id,
       "fullname": req.body.fullname,
-      "bio": req.body.bio
+      "description": req.body.description
     });
   
     // find the competitor item via db.competitor.update({"_id":id}) and then update
@@ -74,7 +74,7 @@ export function ProcessAddPage(req: Request, res: Response, next: NextFunction):
   let newCompetitor = new Competitor
   ({
       "fullname": req.body.fullname,
-      "bio": req.body.bio
+      "description": req.body.description
   });
 
   // db.competitor.insert({competitor data is here...})

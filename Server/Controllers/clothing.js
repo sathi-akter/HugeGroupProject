@@ -4,9 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DisplayAddPage = exports.DisplayEditPage = exports.DisplayClothingListPage = void 0;
-const clothing_1 = __importDefault(require("../Models/clothing"));
+const match_1 = __importDefault(require("../Models/match"));
 function DisplayClothingListPage(req, res, next) {
-    clothing_1.default.find(function (err, clothingCollection) {
+    match_1.default.find(function (err, clothingCollection) {
         if (err) {
             return console.error(err);
         }
@@ -17,7 +17,7 @@ exports.DisplayClothingListPage = DisplayClothingListPage;
 function DisplayEditPage(req, res, next) {
     let id = req.params.id;
     console.log(id);
-    clothing_1.default.findById(id, {}, {}, (err, clothingItemToEdit) => {
+    match_1.default.findById(id, {}, {}, (err, clothingItemToEdit) => {
         if (err) {
             console.error(err);
             res.end(err);

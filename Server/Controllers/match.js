@@ -35,7 +35,7 @@ function ProcessEditPage(req, res, next) {
     let updatedCompetitorItem = new competitor_1.default({
         "_id": id,
         "fullname": req.body.fullname,
-        "bio": req.body.bio
+        "description": req.body.description
     });
     competitor_1.default.updateOne({ _id: id }, updatedCompetitorItem, {}, (err) => {
         if (err) {
@@ -49,7 +49,7 @@ exports.ProcessEditPage = ProcessEditPage;
 function ProcessAddPage(req, res, next) {
     let newCompetitor = new competitor_1.default({
         "fullname": req.body.fullname,
-        "bio": req.body.bio
+        "description": req.body.description
     });
     competitor_1.default.create(newCompetitor, (err) => {
         if (err) {
@@ -71,4 +71,4 @@ function ProcessDeletePage(req, res, next) {
     });
 }
 exports.ProcessDeletePage = ProcessDeletePage;
-//# sourceMappingURL=competitor.js.map
+//# sourceMappingURL=match.js.map
